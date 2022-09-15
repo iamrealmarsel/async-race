@@ -1,0 +1,60 @@
+@use '../abstracts/constants' as *;
+@use 'sass:color';
+
+.track {
+  display: flex;
+  margin-bottom: 15px;
+  column-gap: 25px;
+
+  &__controls {
+    .btn {
+      flex-grow: 1;
+      border-radius: 0;
+      background-color: $color_sec;
+
+      &:hover {
+        background-color: color.scale($color: $color_sec, $lightness: 40%);
+      }
+
+      &:disabled {
+        background-color: color.scale($color: $color_sec, $blackness: 30%);
+        cursor: auto;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    column-gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  &__bottom {
+    column-gap: 2px;
+    display: flex;
+  }
+
+  &__road {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    border-bottom: dashed $color_sec 3px;
+  }
+
+  &__car {
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 50px;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &__flag {
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 60px;
+    margin-bottom: 10px;
+  }
+}

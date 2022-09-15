@@ -1,0 +1,57 @@
+@use '../abstracts/constants' as *;
+
+.winners {
+  display: none;
+
+  &__sort {
+    padding: 3px;
+    margin-left: 3px;
+    cursor: pointer;
+
+    &.active {
+      background-color: $color_sec;
+      border-radius: 100px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__caption {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__table {
+    margin-bottom: 30px;
+  }
+}
+
+.winnerCar {
+  display: flex;
+
+  &__pic {
+    display: block;
+    padding: 0 5px;
+
+    svg {
+      max-width: 90px;
+    }
+  }
+}
+
+.winnersCaption {
+  display: flex;
+
+  &__wins {
+    display: flex;
+    align-items: center;
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+  }
+}

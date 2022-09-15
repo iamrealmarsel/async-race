@@ -1,0 +1,165 @@
+@use '../abstracts/constants' as *;
+@use 'sass:color';
+
+.garage {
+  position: relative;
+
+  &__modal {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    width: 240px;
+    height: 200px;
+    background-color: color.scale($color: $color_sec_3, $alpha: -30%);
+    border-radius: 15px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  &__close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    line-height: 1;
+    background-color: color.scale($color: $color_sec, $alpha: -10%);
+    cursor: pointer;
+
+    &::after {
+      content: '✘';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__modal-title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    display: block;
+  }
+
+  &__time {
+    display: block;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__caption {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__tracks {
+    margin-bottom: 30px;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  border: dashed 3px $color_sec;
+  border-radius: 5px;
+
+  &__left {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
+    .btn {
+      width: 100%;
+      max-width: 120px;
+    }
+
+    .color {
+      width: 100%;
+      max-width: 50px;
+      margin: 0 10px;
+    }
+
+    .inp {
+      flex-grow: 1;
+    }
+  }
+
+  &__create {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__create-inps {
+    display: flex;
+    align-items: center;
+  }
+
+  &__update {
+    align-items: center;
+
+    display: flex;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__generate {
+    max-width: 200px;
+    margin-bottom: 5px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__race {
+    display: flex;
+    column-gap: 5px;
+    max-width: 200px;
+
+    .btn {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (max-width: $bp) {
+  .controls {
+    align-items: center;
+
+    &__create {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__update {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__create-inps {
+      margin-bottom: 5px;
+    }
+
+    &__left .btn {
+      max-width: none;
+    }
+  }
+}

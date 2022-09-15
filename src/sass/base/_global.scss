@@ -1,0 +1,84 @@
+@use '../abstracts/constants' as *;
+@use 'sass:color';
+
+body {
+  min-width: 500px;
+  font-family: $ff_primary;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $color_base_dark;
+  background-color: $bg;
+}
+
+main {
+  padding: 30px 15px;
+}
+
+.btn {
+  border: $color_base_dark 2px solid;
+  border-radius: 5px;
+  background-color: $color_sec_2;
+  color: $color_base_dark;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color.scale($color: $color_sec_2, $lightness: 40%);
+  }
+
+  &:disabled {
+    background-color: color.scale($color: $color_sec_2, $blackness: 30%);
+    color: color.scale($color: $color_base_dark, $saturation: -70%);
+    border-color: color.scale($color: $color_base_dark, $saturation: -70%);
+    cursor: auto;
+  }
+}
+
+.color {
+  background-color: color.scale($color: $color_sec_2, $lightness: 40%);
+
+  &:disabled {
+    background-color: color.scale($color: $color_sec_2, $blackness: 30%);
+    cursor: auto;
+  }
+}
+
+.inp {
+  width: 100%;
+  max-width: 200px;
+  border: $color_base_dark 2px solid;
+  border-radius: 5px;
+  background-color: color.scale($color: $color_sec_2, $lightness: 40%);
+  color: $color_base_dark;
+  outline: transparent;
+
+  &:disabled {
+    background-color: color.scale($color: $color_sec_2, $blackness: 30%);
+    color: color.scale($color: $color_base_dark, $saturation: -70%);
+    border-color: color.scale($color: $color_base_dark, $saturation: -70%);
+    cursor: auto;
+  }
+}
+
+.row {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  &__col-num {
+    width: 10%;
+  }
+  &__col-pic {
+    width: 15%;
+  }
+  &__col-name {
+    width: 25%;
+  }
+  &__col-wins {
+    width: 25%;
+  }
+  &__col-time {
+    width: 25%;
+  }
+}

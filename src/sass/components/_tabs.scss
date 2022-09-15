@@ -1,0 +1,28 @@
+@use '../abstracts/constants' as *;
+@use 'sass:color';
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+  margin-bottom: 30px;
+  font-size: 0;
+
+  .btn {
+    width: 100%;
+    max-width: 120px;
+    background-color: $color_sec_3;
+
+    &:hover {
+      background-color: color.scale($color: $color_sec_3, $lightness: 40%);
+    }
+  }
+
+  &__garage {
+    font-size: 24px;
+  }
+
+  &__winners {
+    font-size: 24px;
+  }
+}

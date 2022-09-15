@@ -1,0 +1,15 @@
+.tabs {
+  outline: rgb(255, 204, 0) solid 1px;
+}
+
+.controls {
+  outline: red solid 1px;
+}
+
+.garage__tracks {
+  outline: rgb(94, 236, 0) solid 1px;
+}
+
+.winners__table {
+  outline: rgb(94, 236, 0) solid 1px;
+}
