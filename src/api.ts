@@ -3,9 +3,9 @@ import { ICar, IPostCar, IServerWinner, TPostWinner } from './helpers/types';
 import { randomizeColor, randomizeName } from './helpers/utils';
 
 const enum Endpoint {
-  GARAGE = 'http://127.0.0.1:3000/garage',
-  WINNERS = 'http://127.0.0.1:3000/winners',
-  ENGINE = 'http://127.0.0.1:3000/engine',
+  GARAGE = 'https://async-race-be-mars.herokuapp.com/garage',
+  WINNERS = 'https://async-race-be-mars.herokuapp.com/winners',
+  ENGINE = 'https://async-race-be-mars.herokuapp.com/engine',
 }
 
 export const getCars = async (
