@@ -1,0 +1,9 @@
+@use '../abstracts/constants' as *;
+
+.loader {
+  svg {
+    width: 100px;
+    height: auto;
+    margin: auto;
+  }
+}
